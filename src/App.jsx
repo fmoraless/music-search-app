@@ -2,7 +2,7 @@ import "./App.css"
 import Login from "./components/login/Login"
 
 function App() {
-  const a = "Hola"
+  const a = "Hola":
   return (
     <div className="main-cointainer">
       <div className="main-left-child">
