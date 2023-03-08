@@ -11,6 +11,9 @@ export default defineConfig({
     port: 3001,
   },
   build: {
+    outDir: "dist",
+    /* Mapea el codigo fuente de la aplicacion */
+    sourcemap: true,
     incremental: true,
 
     babel: {
@@ -24,5 +27,7 @@ export default defineConfig({
     chunks: true,
     moduleBuilding: true,
     devCode: true,
+    /* habilita la generación de un archivo de manifiesto (manifest.json) */
+    manifest: true,
   },
 })

@@ -1,7 +1,13 @@
 {
   "name": "music-search-app",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Music Search App, es una aplicación que permite buscar canciones, artistas y álbumes utilizando la API de Spotify.",
+  "author": {
+    "name": "Francisco Morales",
+    "email": "fcomorales.sanchez@gmail.com",
+    "url": "https://music-search-p9dcpyrgl-fmoraless.vercel.app/"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
