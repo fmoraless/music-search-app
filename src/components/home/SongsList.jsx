@@ -1,12 +1,25 @@
-const SongsList = () => {
+import { ListGroup } from "react-bootstrap"
+
+const SongsList = (props) => {
+  const songs = props.songs
+  
   return (
-    <div>
-      <h1>Songs Component</h1>
-      <ul>
-        <li>Song 1</li>
-        <li>Song 2</li>
-        <li>Song 3</li>
-      </ul>
+    <div className="pt-3">
+      <h4>Canciones</h4>
+      <ListGroup>
+        {songs.map((song) => (
+          <ListGroup.Item
+            key={song.id}
+            style={{ display: "flex", justifyContent: "space-between" }}
+          >
+            <div>
+              {song.name}
+              <div className="text-muted">{song.artists[0].name}</div>
+            </div>
+            <div>{(song.duration_ms / 60000).toFixed(2)} min</div>
+          </ListGroup.Item>
+        ))}
+      </ListGroup>
     </div>
   )
 }
