@@ -1,23 +1,24 @@
 import { Card } from "react-bootstrap"
+import s from "./style.module.css"
 
 const FirstSong = (props) => {
   const firstSong = props.firstSong
-  console.log("PRIMERA CANCION comp", firstSong)
 
   return (
-    <div>
+    <div className="pt-3">
       <h4>Resultado más relevante</h4>
       <Card>
         <Card.Img
           variant="top"
           src={firstSong.album.images[0].url}
-          style={{ width: "100px" }}
+          className={s.img}
+          /* style={{ width: "100px" }} */
         />
         <Card.Body>
           <Card.Title>{firstSong.name}</Card.Title>
           <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            Canción del disco {firstSong.album.name} -{" "}
+            {firstSong.album.release_date.split("-")[0]}
           </Card.Text>
           <Card.Footer>
             <div className="row">
