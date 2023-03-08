@@ -1,8 +1,8 @@
 import { Card } from "react-bootstrap"
+import s from "./style.module.css"
 
 const Album = (props) => {
   const albums = props.albums
-  console.log("ALBUMES", albums)
 
   return (
     <div className="row justify-content-between">
@@ -13,13 +13,7 @@ const Album = (props) => {
             <Card.Img
               variant="top"
               src={album.images[0].url}
-              style={{
-                width: "150px",
-                display: "block",
-                margin: "0 auto",
-                marginTop: "30px",
-                borderRadius: "50%",
-              }}
+              className={s.albumImg}
             />
             <Card.Body>
               <Card.Title>{album.name}</Card.Title>

@@ -2,9 +2,9 @@ import { ListGroup } from "react-bootstrap"
 
 const SongsList = (props) => {
   const songs = props.songs
-  console.log({ fromList: songs })
+  
   return (
-    <div>
+    <div className="pt-3">
       <h4>Canciones</h4>
       <ListGroup>
         {songs.map((song) => (
